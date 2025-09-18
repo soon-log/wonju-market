@@ -10,20 +10,32 @@
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
+    /* Brand palette */
+    --primary: 160 84% 39%; /* emerald */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 75% 45%; /* azure */
+    --secondary-foreground: 0 0% 100%;
+    --accent: 28 90% 58%; /* orange */
     --accent-foreground: 0 0% 9%;
+    /* System */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
     --radius: 0.5rem;
+    /* Grayscale (light) */
+    --gray-50: 0 0% 98%;
+    --gray-100: 0 0% 96%;
+    --gray-200: 0 0% 90%;
+    --gray-300: 0 0% 83%;
+    --gray-400: 0 0% 63%;
+    --gray-500: 0 0% 45%;
+    --gray-600: 0 0% 32%;
+    --gray-700: 0 0% 25%;
+    --gray-800: 0 0% 15%;
+    --gray-900: 0 0% 9%;
+    /* Charts (placeholder) */
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -38,19 +50,31 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    /* Brand palette (dark-optimized) */
+    --primary: 160 70% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 70% 55%;
+    --secondary-foreground: 0 0% 10%;
+    --accent: 28 90% 60%;
+    --accent-foreground: 0 0% 10%;
+    /* System */
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
+    /* Grayscale (dark) */
+    --gray-50: 0 0% 10%;
+    --gray-100: 0 0% 14.9%;
+    --gray-200: 0 0% 20%;
+    --gray-300: 0 0% 26%;
+    --gray-400: 0 0% 36%;
+    --gray-500: 0 0% 46%;
+    --gray-600: 0 0% 62%;
+    --gray-700: 0 0% 74%;
+    --gray-800: 0 0% 86%;
+    --gray-900: 0 0% 95%;
+    /* Charts (placeholder) */
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -64,6 +88,32 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl font-semibold leading-tight tracking-tight;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold leading-snug;
+  }
+  h4 {
+    @apply text-xl md:text-2xl font-semibold leading-snug;
+  }
+  h5 {
+    @apply text-lg font-medium leading-snug;
+  }
+  h6 {
+    @apply text-base font-medium leading-snug tracking-wide;
+  }
+  small,
+  caption,
+  figcaption {
+    @apply text-sm text-muted-foreground;
   }
 }
