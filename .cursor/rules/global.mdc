@@ -12,6 +12,7 @@ alwaysApply: true
 - always use client component for all components. (use `use client` directive)
 - always use promise for page.tsx params props.
 - use valid picsum.photos stock image for placeholder image
+- use kebab-case for all file names (e.g., user-profile.tsx, market-grid.tsx)
 
 ## Library
 
